@@ -4,14 +4,11 @@ const app = express();
 const auth = require("./routes/auth");
 const list = require("./routes/list");
 app.use(express.json());
-const path = require("path");
+
 const cors = require("cors");
 app.use(cors());
 
-app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "frontend", "dist")));
-  res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-});
+
 
 app.use("/api/v1", auth);
 app.use("/api/v2", list);
