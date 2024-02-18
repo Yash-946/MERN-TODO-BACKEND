@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 // console.log( typeof(process.env.MONGODB_URL));
 mongoose.connect(
-  process.env.MONGODB_URL
+  "mongodb+srv://yashagrawal946:Pl7Yx4tT3SDAJBmI@cluster0.rnew19r.mongodb.net/Todos"
 );
 
 const listSchema = new mongoose.Schema(
